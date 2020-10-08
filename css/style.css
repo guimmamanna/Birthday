@@ -1,3 +1,11 @@
+@font-face{
+  src: url("../fonts/Blacksword.otf");
+  font-family: 'sword';
+}
+@font-face{
+  src: url("../fonts/Night DEMO.ttf");
+  font-family: 'night';
+}
 
 .waben{
   position: relative;
@@ -12,8 +20,8 @@
 }
 .birthday{
   position: absolute;
-  top:25%;
-  left:30%;
+  top:27%;
+  left:40%;
   transform:translate(-50%, -50%);
   -webkit-transform:translate(-50%, -50%);
 }
@@ -34,7 +42,7 @@
 .custom{
   position: absolute;
   top:88%;
-  left:77%;
+  left:70%;
   transform:translate(-50%, -50%);
   -webkit-transform:translate(-50%, -50%);
 }
@@ -65,23 +73,25 @@ h2{
   color: whitesmoke;
 }
 h1{
-  font-family: 'Lobster';
-  font-size: 100px;
+  font-family: 'sword';
+  font-size: 90px;
   color: whitesmoke;
 }
 
 h3{
-  font-family: 'Lobster';
+  font-family: 'night';
   font-size: 25px;
-  color: skyblue;
+  color: #526ddb;
 }
 h4{
-  font-size: 25px;
+   font-family: 'night';
+  font-size: 35px;
   text-align: center;
-   color: skyblue;
+   color: #526ddb;
 }
 h5{
   white-space: nowrap;
+  font-family: 'night';
   font-size: 25px;
   text-align: center;
    color: whitesmoke;
