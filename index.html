@@ -1,6 +1,6 @@
  <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 <title>Birthday Ecards</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
@@ -9,16 +9,12 @@
  <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
- 
- <div class="container-fluid test img-responsive">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="text-center col-md-6 waben">
+    <div class="text-center col-md-6 waben">
+    <div id="screen">
+               
+                        
                             <img class="wabeeins pull-left img-responsive" src="img/a.jpg"
-                                height="700" width="700" id="wabeone" alt=wabe1>
+                                height="700" width="700" id="wabeone" alt="">
                             <div class="fellowship">
                                 <h2 contentEditable>BLW NAME OF FELLOWSHIP</h2>
                             </div>
@@ -36,11 +32,8 @@
                             </div>
                         </div>          
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+            
+
 
 
 <div class="upload">
@@ -54,12 +47,27 @@
     
 <input type="file" 
     onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
-    <button id="download">Download</button>
+    <button id="button">Download</button>
  </div>
 
 
 </body>
     <script src="js/main.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+    <script>
+    $(document).ready(function(){
+    $("#button").click(function(){
+ domtoimage.toBlob(document.getElementById('screen')).then(function(blob){
+    window.saveAs(blob,"Birthday eCard.png")
+    });
+    });
+    });
+        </script>
+<script 
+src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 </html> 
 
 

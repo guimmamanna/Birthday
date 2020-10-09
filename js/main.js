@@ -1,8 +1,17 @@
-var node = document.getElementById('waben');
-var btn = document.getElementById('download');
-btn.onclick = function() {
-  domtoimage.toBlob(document.getElementById('waben'))
-    .then(function(blob) {
-      window.saveAs(blob, 'my-node.png');
+
+
+var takeScreenShot = function () {
+    html2canvas(document.getElementById("container"), {
+        onrendered: function (canvas) {
+            var tempcanvas = document.createElement('canvas');
+            tempcanvas.width = 350;
+            tempcanvas.height = 350;
+            var context = tempcanvas.getContext('2d');
+            context.drawImage(canvas, 112, 0, 288, 200, 0, 0, 350, 350);
+            var link = document.createElement("a");
+            link.href = tempcanvas.toDataURL('image/jpg'); //function blocks CORS
+            link.download = 'Birthday eCard.jpg';
+            link.click();
+        }
     });
 }
